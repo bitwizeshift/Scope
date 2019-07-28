@@ -1,17 +1,20 @@
 
 [![Release](https://img.shields.io/github/release/bitwizeshift/Scope.svg)](https://github.com/bitwizeshift/Scope/releases/latest)
-[![License](https://img.shields.io/badge/license-Boost-blue.svg)](https://raw.githubusercontent.com/bitwizeshift/Scope/master/LICENSE)
+[![License](https://img.shields.io/badge/License-BSL--1.0-blue.svg)](https://raw.githubusercontent.com/bitwizeshift/Scope/master/LICENSE)
 [![Github Issues](https://img.shields.io/github/issues/bitwizeshift/Scope.svg)](https://github.com/bitwizeshift/Scope/issues)
 
 # {Scope}
 
-**Scope** is a C++11 compatible utility library for managing resources using
-RAII in a modern way. The library is header-only (only a single header!), so
-it can easily be dropped in to any project!
+**{Scope}** is a modern utility library for managing resources using RAII.
+This library features a permissive license ([Boost Software License](#license)),
+and is only a single header -- making it simple to drop into any project.
+This is compatible with any modern version of C++ provided it supports
+C++11 or greater.
 
-This project is a C++11 implementation of the
+**Note:** This library is an implementation of the
 [p0052r6 proposal paper][1] that introduces the `<scope>` header and utilities
-to the C++ standard.
+to the C++ standard, but is written in C++11 with support for C++17
+type-deduced constructors -- rather than only supporting C++17 features.
 
 ## Features
 
