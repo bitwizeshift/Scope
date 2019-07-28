@@ -1,0 +1,128 @@
+
+[![Release](https://img.shields.io/github/release/bitwizeshift/Scope.svg)](https://github.com/bitwizeshift/Scope/releases/latest)
+[![License](https://img.shields.io/badge/license-Boost-blue.svg)](https://raw.githubusercontent.com/bitwizeshift/Scope/master/LICENSE)
+[![Github Issues](https://img.shields.io/github/issues/bitwizeshift/Scope.svg)](https://github.com/bitwizeshift/Scope/issues)
+
+# {Scope}
+
+**Scope** is a C++11 compatible utility library for managing resources using
+RAII in a modern way. The library is header-only (only a single header!), so
+it can easily be dropped in to any project!
+
+This project is a C++11 implementation of the
+[p0052r6 proposal paper][1] that introduces the `<scope>` header and utilities
+to the C++ standard.
+
+## Features
+
+- [x] Easily manage any C-style resources in an idiomatic way with
+      `unique_resource`
+- [x] Handle writing clean-up code exactly once with the various scope guards;
+      keep that code `DRY`!
+- [x] Works with C++11, and is fully functional in C++17
+- [x] Written with portable C++ code, and tested on various compilers and
+      operating systems
+- [x] Only a single-header -- drop it in anywhere!
+- [x] Super permissive license with the [Boost License](#license)
+
+[1]: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0052r6.pdf
+
+### Scope Guards
+
+Scope guards allow for deferring an action until the end of a given scope.
+This can be useful for various things:
+
+* Logging
+* Cleaning up resources in a function with multiple exit cases
+* Creating transactional support by 'rolling-back' changes on failure
+* etc
+
+Three different scope guards exist for handling different exit strategies:
+
+* **`scope_exit`**: Executes the callback every time
+* **`scope_success`**: Executes the callback only on successful scope exit
+  (no exceptions thrown)
+* **`scope_fail`**: Executes the callback only on exceptional cases, when
+  a scope is terminating due to a thrown exception.
+
+### `unique_resource`
+
+The `unique_resource` type is a more general version of the C++ standard's
+`unique_ptr`, allowing for any underlying resource type to be managed with
+unique ownership. This utility is extremely helpful for managing resources
+distributed by old C-style interfaces.
+
+For example, this could be done to manage a POSIX file:
+
+```c++
+{
+  auto file = ::scope::make_unique_resource(
+    ::open(...),
+    &::close
+  );
+  // decltyp(file) is ::scope::unique_resource<int,void(*)(int)<
+
+  ...
+
+} // calls ::close on scope
+```
+
+In general, this can be used for any type of resource that has a dedicated
+cleanup function. The deleters can be functors, lambdas, or any function
+pointer.
+
+## Tested Compilers
+
+The following compilers are currently being tested through
+[continuous integration](#continuous-integration) with
+[Travis](https://travis-ci.com/bitwizeshift/Scope) and
+[AppVeyor](https://ci.appveyor.com/project/bitwizeshift/Scope/)
+
+| Compiler              | Operating System                   |
+|-----------------------|------------------------------------|
+| TODO                  | TODO                               |
+
+## Continuous Integration
+
+| **Build**     | **Status**      |
+|---------------|-----------------|
+| Ubuntu, macOS | [![Build Status](https://api.travis-ci.com/bitwizeshift/Scope.svg?token=rvTHXMwwmVPcnLHJjss7&branch=master)](https://travis-ci.com/bitwizeshift/Scope) |
+| MSVC          | [![Build status](https://ci.appveyor.com/api/projects/status/ou5sraydky6tjxv9?svg=true)](https://ci.appveyor.com/project/bitwizeshift/Scope) |
+
+## Current Releases
+
+| **Host**            | **Release**      |
+|---------------------|------------------|
+| Github              | [![Release](https://img.shields.io/github/release/bitwizeshift/Scope.svg)](https://github.com/bitwizeshift/Scope/releases/latest) |
+| Conan               | [![Release](https://img.shields.io/github/release/bitwizeshift/Scope.svg)](#)
+
+## License
+
+<img align="right" src="http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png">
+
+**{Scope}** is licensed under the
+[Boost Software License 1.0](https://www.boost.org/users/license.html):
+
+> Boost Software License - Version 1.0 - August 17th, 2003
+>
+> Permission is hereby granted, free of charge, to any person or organization
+> obtaining a copy of the software and accompanying documentation covered by
+> this license (the "Software") to use, reproduce, display, distribute,
+> execute, and transmit the Software, and to prepare derivative works of the
+> Software, and to permit third-parties to whom the Software is furnished to
+> do so, all subject to the following:
+>
+> The copyright notices in the Software and this entire statement, including
+> the above license grant, this restriction and the following disclaimer,
+> must be included in all copies of the Software, in whole or in part, and
+> all derivative works of the Software, unless such copies or derivative
+> works are solely in the form of machine-executable object code generated by
+> a source language processor.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+> FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+> SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+> FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+> ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+> DEALINGS IN THE SOFTWARE.
