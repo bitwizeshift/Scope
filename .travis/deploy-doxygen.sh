@@ -58,6 +58,7 @@ touch "dist/.nojekyll"
 
 # Exchange the old api content for the new content
 rm -rf "${api_doc_path}"
+mkdir -p "${api_doc_path}"
 mv "${doxygen_output_path}/html" "${api_doc_path}"
 
 # Add everything and upload
