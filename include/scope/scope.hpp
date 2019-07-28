@@ -57,8 +57,6 @@
 //! remainder of the scope.
 #if __cplusplus >= 201703L
 # define SCOPE_NODISCARD [[nodiscard]]
-#elif defined(__has_cpp_attribute) && __has_cpp_attribute(gnu::warn_unused_result)
-# define SCOPE_NODISCARD [[gnu::warn_unused_result]]
 #elif defined(__GNUC__) || defined(__CLANG__)
 # define SCOPE_NODISCARD __attribute__ ((warn_unused_result))
 #elif defined(_MSC_VER) && (_MSC_VER >= 1700)
