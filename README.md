@@ -16,6 +16,21 @@ C++11 or greater.
 to the C++ standard, but is written in C++11 with support for C++17
 type-deduced constructors -- rather than only supporting C++17 features.
 
+## Table of Contents
+
+* [Features](#features) \
+  A summary of all existing features in **{Scope}**
+* [API Reference](https://bitwizeshift.github.io/Scope/api/latest/) \
+  For doxygen-generated API information
+* [Tutorials](doc/tutorial.md) \
+  For tutorials on how to use **{Scope}**
+* [How to install](doc/installing.md) \
+  For a quick guide on how to install/use this in other projects
+* [Legal](doc/legal.md) \
+  Information about how to attribute this project
+* [Contributing Guidelines](.github/CONTRIBUTING.md) \
+  Guidelines for how to contribute to this project
+
 ## Features
 
 - [x] Easily manage any C-style resources in an idiomatic way with
