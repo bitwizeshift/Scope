@@ -10,7 +10,6 @@ set -e
 
 if ! test -z "${CXX_COMPILER}"; then
   export CXX=${CXX_COMPILER}
-  # - export CXX="ccache ${CXX_COMPILER}"
 fi
 
 build_directory="build"

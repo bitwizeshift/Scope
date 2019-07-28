@@ -8,6 +8,11 @@
 
 set -e
 
+# Nothing to install when we do a doxygen build
+if ! test -z "${DOXYGEN_AGENT}"; then
+  exit 0
+fi
+
 if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
   sudo python3 -m pip install --upgrade --force setuptools
   sudo python3 -m pip install --upgrade --force pip
