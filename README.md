@@ -80,13 +80,26 @@ The following compilers are currently being tested through
 
 | Compiler              | Operating System                   |
 |-----------------------|------------------------------------|
-| TODO                  | TODO                               |
+| `g++4.9`              | Ubuntu 14.04.5 LTS                 |
+| `g++5`                | Ubuntu 14.04.5 LTS                 |
+| `g++6`                | Ubuntu 14.04.5 LTS                 |
+| `g++7`                | Ubuntu 14.04.5 LTS                 |
+| `g++8`                | Ubuntu 14.04.5 LTS                 |
+| `clang++-3.5`         | Ubuntu 14.04.5 LTS                 |
+| `clang++-3.6`         | Ubuntu 14.04.5 LTS                 |
+| `clang++-8.0`         | Ubuntu 14.04.5 LTS                 |
+| Xcode-9 clang++       | Mac OSX 10.12.6 (Darwin 16.7.0)    |
+| Xcode 9.1 clang++     | Mac OSX 10.12.6 (Darwin 16.7.0)    |
+| Xcode 9.2 clang++     | Mac OSX 10.12.6 (Darwin 16.7.0)    |
+| Xcode 9.3 clang++     | Mac OSX 10.13.3 (Darwin 17.4.0)    |
+| Xcode 9.44 clang++    | Mac OSX 10.13.3 (Darwin 17.4.0)    |
+| Xcode 10 clang++      | Mac OSX 10.13.6 (Darwin 17.7.0)    |
 
 ## Continuous Integration
 
 | **Build**     | **Status**      |
 |---------------|-----------------|
-| Ubuntu, macOS | [![Build Status](https://api.travis-ci.com/bitwizeshift/Scope.svg?token=rvTHXMwwmVPcnLHJjss7&branch=master)](https://travis-ci.com/bitwizeshift/Scope) |
+| Ubuntu, macOS | [![Build Status](https://travis-ci.com/bitwizeshift/Scope.svg?branch=master)](https://travis-ci.com/bitwizeshift/Scope) |
 | MSVC          | [![Build status](https://ci.appveyor.com/api/projects/status/ou5sraydky6tjxv9?svg=true)](https://ci.appveyor.com/project/bitwizeshift/Scope) |
 
 ## Current Releases
