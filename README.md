@@ -94,7 +94,7 @@ pointer.
 The following compilers are currently being tested through
 [continuous integration](#continuous-integration) with
 [Travis](https://travis-ci.com/bitwizeshift/Scope) and
-[AppVeyor](https://ci.appveyor.com/project/bitwizeshift/Scope/)
+[AppVeyor](https://ci.appveyor.com/project/bitwizeshift/scope)
 
 | Compiler              | Operating System                   |
 |-----------------------|------------------------------------|
@@ -112,13 +112,15 @@ The following compilers are currently being tested through
 | Xcode 9.3 clang++     | Mac OSX 10.13.3 (Darwin 17.4.0)    |
 | Xcode 9.44 clang++    | Mac OSX 10.13.3 (Darwin 17.4.0)    |
 | Xcode 10 clang++      | Mac OSX 10.13.6 (Darwin 17.7.0)    |
+| Visual Studio 2015    | Windows Server 2012 R2             |
+| Visual Studio 2017    | Windows Server 2016                |
 
 ## Continuous Integration
 
 | **Build**     | **Status**      |
 |---------------|-----------------|
 | Ubuntu, macOS | [![Build Status](https://travis-ci.com/bitwizeshift/Scope.svg?branch=master)](https://travis-ci.com/bitwizeshift/Scope) |
-| MSVC          | [![Build status](https://ci.appveyor.com/api/projects/status/ou5sraydky6tjxv9?svg=true)](https://ci.appveyor.com/project/bitwizeshift/Scope) |
+| MSVC          | [![Build status](https://ci.appveyor.com/api/projects/status/wj0frj0ld1xh0ltk/branch/master?svg=true)](https://ci.appveyor.com/project/bitwizeshift/scope/branch/master) |
 
 ## Current Releases
 
