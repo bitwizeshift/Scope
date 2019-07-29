@@ -262,7 +262,7 @@ jobs:
     - <<: *linux_gcc8_agent
       stage: deploy
       name: "Deploy"
-      if: (tag =~ ^v) AND (branch = master) AND (type = push)
+      if: (tag =~ ^v) AND (type = push)
       script: ./.travis/deploy-conan.sh
 
 install:
