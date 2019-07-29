@@ -1,38 +1,13 @@
 /****************************************************************************
  * \file scope.hpp
  *
- * This header contains
+ * This header contains the definition for scope utilities, as defined in the
+ * p0052r6 proposal paper:
+ * http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0052r6.pdf
+ *
+ * This file is written in C++11, with compatible extensions for C++17
+ * through the constructor deduction guides.
  ****************************************************************************/
-
-/*
-  Synopsis:
-
-  classes:
-
-  template <typename Fn>
-  class scope_exit;
-
-  template <typename Fn>
-  class scope_success;
-
-  template <typename Fn>
-  class scope_fail;
-
-  template <typename R, typename D>
-  class unique_resource;
-
-  utilities:
-
-  template <typename Fn>
-  scope_exit<std::decay_t<Fn>> make_scope_exit(Fn&& fn);
-
-  template <typename Fn>
-  scope_success<std::decay_t<Fn>> make_scope_success(Fn&& fn);
-
-  template <typename Fn>
-  scope_fail<std::decay_t<Fn>> make_scope_fail(Fn&& fn);
-
- */
 
 //          Copyright Matthew Rodusek 2019.
 // Distributed under the Boost Software License, Version 1.0.
