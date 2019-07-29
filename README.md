@@ -127,7 +127,7 @@ The following compilers are currently being tested through
 | **Host**            | **Release**      |
 |---------------------|------------------|
 | Github              | [![Release](https://img.shields.io/github/release/bitwizeshift/Scope.svg)](https://github.com/bitwizeshift/Scope/releases/latest) |
-| Conan               | [![Release](https://img.shields.io/github/release/bitwizeshift/Scope.svg)](#)
+| Conan               | [ ![Release](https://api.bintray.com/packages/bitwizeshift/Scope/Scope%3Ascope/images/download.svg) ](https://bintray.com/bitwizeshift/Scope/Scope%3Ascope/_latestVersion) |
 
 ## License
 
