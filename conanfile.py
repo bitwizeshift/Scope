@@ -6,7 +6,7 @@ class ScopeConan(ConanFile):
 
     # Package Info
     name = "Scope"
-    version = "0.1.0"
+    version = "1.0.0"
     description = "An RAII scope-guard library"
     url = "https://github.com/bitwizeshift/Scope"
     author = "Matthew Rodusek <matthew.rodusek@gmail.com>"
